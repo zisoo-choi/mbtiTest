@@ -14,6 +14,7 @@ function addAnswer(answerText, qIdx, idx){
     answer.classList.add('my-5');
     answer.classList.add('py-3');
     answer.classList.add('mx-auto');
+    answer.classList.add('Gmarket');
 
     answer.classList.add('fadeIn');
 
@@ -26,8 +27,8 @@ function addAnswer(answerText, qIdx, idx){
         for (let i=0; i<children.length; i++){
             children[i].disabled = true;
 
-            children[i].style.WebkitAnimaion = "fadeOut 0.5s"
-            children[i].style.animaion = "fadeOut 0.5s"
+            children[i].style.WebkitAnimation = "fadeOut 0.5s"
+            children[i].style.animation = "fadeOut 0.5s"
         }
         setTimeout(()=>{
 
@@ -44,7 +45,6 @@ function addAnswer(answerText, qIdx, idx){
         } ,450)
     },false)
 }
-
 function calResult(){
     var result = select.indexOf(Math.max(...select));
     return result;
@@ -64,7 +64,8 @@ function setResult(){
 
     resultImg.src = imgURL;
     resultImg.alt = point++;
-    result.classList.add('img-fluid');
+    
+    resultImg.classList.add('img-fluid');
     imgDiv.appendChild(resultImg);
 
     const resultDesc1 = document.querySelector('.resultDesc1');
